@@ -1,16 +1,12 @@
 {
   "files": {
-    "main.css": "/bezunia/static/css/main.073c9b0a.css",
-    "main.js": "/bezunia/static/js/main.5d8ca098.js",
+    "main.js": "/bezunia/static/js/main.5e2f2ee6.js",
     "static/js/787.db011929.chunk.js": "/bezunia/static/js/787.db011929.chunk.js",
-    "static/media/logo.svg": "/bezunia/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/bezunia/index.html",
-    "main.073c9b0a.css.map": "/bezunia/static/css/main.073c9b0a.css.map",
-    "main.5d8ca098.js.map": "/bezunia/static/js/main.5d8ca098.js.map",
+    "main.5e2f2ee6.js.map": "/bezunia/static/js/main.5e2f2ee6.js.map",
     "787.db011929.chunk.js.map": "/bezunia/static/js/787.db011929.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.5d8ca098.js"
+    "static/js/main.5e2f2ee6.js"
   ]
 }
