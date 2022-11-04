@@ -7,10 +7,10 @@ let theme = createTheme({
       white: "#ffffff",
     },
     primary: {
-      light: "#d8ffd8",
-      main: "#00ff00",
-      dark: "#008900",
-      contrastText: "#00ff00",
+      light: "#e2e2e3",
+      main: "#c6c5c8",
+      dark: "#8a898d",
+      contrastText: "#e2e2e3",
     },
     secondary: {
       light: "#fffbf8",

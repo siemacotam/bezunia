@@ -37,7 +37,7 @@ export const HeaderDrawer = ({
       }}
     >
       <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-        <Typography component={Link} to="/" variant="h6" sx={{ my: 2 }}>
+        <Typography component={Link} to="/bezunia" variant="h6" sx={{ my: 2 }}>
           Bezunia
         </Typography>
         <Divider />

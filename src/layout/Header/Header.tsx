@@ -31,7 +31,7 @@ export const Header = () => {
             <MenuIcon />
           </IconButton>
           <Box sx={{ flexGrow: 1 }}>
-            <Typography component={Link} to="/" variant="h6">
+            <Typography component={Link} to="/bezunia" variant="h6">
               Bezunia
             </Typography>
           </Box>
