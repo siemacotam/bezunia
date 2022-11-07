@@ -5,15 +5,20 @@ import {
   Typography,
   Toolbar,
   Button,
+  Stack,
 } from "@mui/material/";
 import MenuIcon from "@mui/icons-material/Menu";
 import { HeaderDrawer } from "./HeaderDrawer";
 import { routes } from "src/global/const";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const location = useLocation();
+
+  const isSectionActive = (path: string) => location.pathname === path;
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -22,19 +27,26 @@ export const Header = () => {
   return (
     <Box sx={{ display: "flex" }}>
       <AppBar sx={{ bgcolor: "white" }} component="nav">
-        <Toolbar sx={{ color: "black" }}>
-          <IconButton
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+        <Toolbar
+          sx={{ color: "black", maxWidth: "1200px", width: "100%", mx: "auto" }}
+        >
+          <Stack
+            sx={{ flexGrow: 1 }}
+            direction="row"
+            justifyContent="space-between"
+            alignItems="center"
           >
-            <MenuIcon />
-          </IconButton>
-          <Box sx={{ flexGrow: 1 }}>
             <Typography component={Link} to="/bezunia" variant="h6">
               Bezunia
             </Typography>
-          </Box>
+
+            <IconButton
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: "none" } }}
+            >
+              <MenuIcon />
+            </IconButton>
+          </Stack>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {routes.map(({ label, path }) => {
               if (label) {
@@ -43,7 +55,7 @@ export const Header = () => {
                     component={Link}
                     to={path}
                     key={label}
-                    sx={{ color: "black" }}
+                    sx={{ color: isSectionActive(path) ? "red" : "black" }}
                   >
                     {label}
                   </Button>
